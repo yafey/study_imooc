@@ -50,16 +50,21 @@ public class GirlControllerRESTful {
 		return girlRepository.findById(id).get();
 	}
 
-	//更新
+	// 更新
 	@PutMapping("/girls/{id}")
 	public Girl girlUpdate(@PathVariable Integer id, @RequestParam String cupSize, @RequestParam Integer age) {
 		Girl girl = new Girl().setId(id).setAge(age).setCupSize(cupSize);
 		return girlRepository.save(girl);
 	}
-	
-	//删除
+
+	// 删除
 	@DeleteMapping("/girls/{id}")
 	public void girlDelete(@PathVariable Integer id) {
 		girlRepository.deleteById(id);
+	}
+
+	@GetMapping("/girls/age/{age}")
+	public List<Girl> girlFindByAge(@PathVariable Integer age) {
+		return girlRepository.findByAge(age);
 	}
 }
