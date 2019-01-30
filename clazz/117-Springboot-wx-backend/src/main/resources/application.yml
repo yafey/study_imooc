@@ -1,2 +1,13 @@
 server:
   port: 80
+
+logging:
+  pattern:
+    console: "%d - %msg%n"
+# path 指定 log 路径， 默认的日志文件名为 spring.log
+  path: ./log/
+# file 在指定路径的同时， 指定文件名。
+# file: ./log/sell.log
+# 指定 package/class 级别的 日志信息级别。
+  level:
+    com.yafey.LoggerTest: debug
