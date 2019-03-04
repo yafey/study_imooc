@@ -46,3 +46,5 @@
 - 第7章 课程回顾 : 回顾课程内容
 
 	- 7-1 课程回顾 (03:39) 
+	
+![boot-start-introduction](boot-start-introduction.png)
